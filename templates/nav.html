@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Your Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="/" class="navbar-logo">
+        <img src="{{ url_for('static', filename='logo1.png') }}" alt="SkyRocket Logo">
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+           <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+           </li>
+           <li class="nav__item">
+              <a href="#" class="nav__link">About Us</a>
+           </li>
+           <li class="nav__item">
+              <a href="#" class="nav__link">Services</a>
+           </li>
+           <li class="nav__item">
+              <a href="#" class="nav__link">Contact Us</a>
+           </li>
+        </ul>
+        <!-- Close button -->
+        <div class="nav__close" id="nav-close">
+           <i class="ri-close-line"></i>
+        </div>
+      </div>
+      <div class="nav__actions">
+        <!-- Login button -->
+        <a href="{{url_for('login')}}" class="ri-user-line nav__login"></a>
+        
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+           <i class="ri-menu-line"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
